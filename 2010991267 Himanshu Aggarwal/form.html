@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body>
+	<div class="col-md-12 header">
+		<h2>Student Registration Form</h2>
+	</div>
+
+	<div class="col-md-offset-2 col-md-8 form">
+		<form >
+			<p>
+				<label>FIRST NAME:</label>
+				<input type="text" id="fname">
+				<span>(max 30 characters a-z and A-Z)</span>
+				<span id="fnameerror" style="color: red; font-weight: bold;"></span>
+			</p>
+			<p>
+				<label>LAST NAME:</label>
+				<input type="text" id="lname">
+				<span>(max 30 characters a-z and A-Z)</span>
+				<span id="lnameerror" style="color: red; font-weight: bold;"></span>
+			</p>
+			<p>
+	<label>DATE OF BIRTH:</label>			
+ <select  NAME="dt_list" id="date">
+  <!-- <option value="" >Date</option> -->
+</select>
+
+<select  NAME="Month_list" id="month">
+ <!-- <option value="" >Month</option> -->
+</select>
+
+<select  NAME="year_list" id="year">
+   <!-- <option value="" >Year</option> -->
+</select>
+
+			</p>
+			<p>
+				<label>MOBILE NUMBER:</label>
+				<input type="number" id="mbno">
+				<span>(10 digit number)</span>
+				<span id="mobileerror" style="color:red; font-weight: bold;"></span>
+			</p>
+			<p>
+				<label>GENDER:</label>
+				<span>Male</span>
+				<input type="radio" name="gender" value="male" id="m">
+				<span>Female</span>
+				<input type="radio" name="gender" value="female" id="f">
+				<span id="gendererror" style="color: red; font-weight: bold;"></span>
+			</p>
+			<p id="address">
+				<label>ADDRESS:</label>
+				<textarea cols="30" rows="3"></textarea>
+			</p>
+			<p>
+				<label>CITY:</label>
+				<input type="text" name="" id="city">
+				<span>(max 30 characters a-z and A-Z)</span>
+				<span id="cityerror" style="color:red; font-weight: bold;"></span>
+			</p>
+			<p>
+				<label>PIN CODE:</label>
+				<input type="number" name="" id="pincode">
+				<span>( 6 digit number)</span>
+				<span id="pinerror" style="color:red; font-weight: bold;"></span>
+			</p>
+			<p>
+				<label>STATE:</label>
+				<input type="text" name="" id="state">
+				<span>(max 30 characters a-z and A-Z)</span>
+				<span id="stateerror" style="color:red; font-weight: bold;"></span>
+			</p>
+			<p>
+				<label>COUNTRY:</label>
+				<input type="text" name="" id="country">
+				<span id="countryerror" style="color:red; font-weight: bold;"></span>
+			</p>
+			<p>
+				<label>HOBBIES:</label>
+				<span>Drawing</span><input type="checkbox">
+				<span>Singing</span><input type="checkbox">
+				<span>Dancing</span><input type="checkbox">
+				<span>Sketching</span><input type="checkbox">
+				<span>Others</span><input type="checkbox">
+			</p>
+			<p>
+        <label style="float: left;">QUALIFICATION</label>
+        <div class="table">
+            <table cellpadding="8"  class="was-validated">
+                <tr>
+                    <td>SI. No.</td>
+                    <td>Examination</td>
+                    <td>Board</td>
+                    <td>Percentage</td>
+                    <td>Year of Passing</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Class X</td>
+                    <td><input type="text" name="" maxlength="10" id="marksone"></td>
+                    <td><input type="number" name="" maxlength="5" id="perone"></td>
+                    <td><input type="number" name="" id="yearone"></td>
+                    <span id="oneerror" style="color: red; font-weight: bold;"></span>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Class XII</td>
+                    <td><input type="text" name="" maxlength="10" id="markstwo"></td>
+                    <td><input type="number" name="" maxlength="5"  id="pertwo"></td>
+                    <td><input type="number" name=""  id="yeartwo"></td>
+                    <span id="twoerror" style="color: red; font-weight: bold;"></span>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Graduation</td>
+                    <td><input type="text" name="" maxlength="10" id="marksthree"></td>
+                    <td><input type="number" name="" maxlength="5" id="perthree"></td>
+                    <td><input type="number" name="" id="yearthree"></td>
+                    <span id="threeerror" style="color: red; font-weight: bold;"></span>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Masters</td>
+                    <td><input type="text" name="" maxlength="10" id="marksfour"></td>
+                    <td><input type="number" name="" maxlength="5" id="perfour"></td>
+                    <td><input type="number" name="" id="yearfour"></td>
+                    <span id="fourerror" style="color: red; font-weight: bold;"></span>
+                </tr>
+            </table>
+        </div>
+        </p>
+
+			<p>
+				<label>COURSES:</label>
+				<span>B.Sc</span><input type="radio" id="bsc" value="B.Sc">
+				<span>B.Com</span><input type="radio"  id="bcom" value="B.com">
+				<span>BCA</span><input type="radio"  id="bca" value="BCA">
+				<span>BA</span><input type="radio"  id="ba" value="BA">
+        <span id="courseerror" style="color: red; font-weight: bold;"></span>
+			</p>
+			<div class="sbmt">
+				<input type="button" value="Submit" onclick="final()" name="">
+				<input type="reset" value="Reset">
+			<div>
+		</form>
+	</div>
+
+	<script type="text/javascript">
+		
+    function validation(){
+      var fname = document.getElementById('fname').value;
+      var f=/^[a-zA-Z]+$/;
+      var y=fname.match(f);
+    
+      if(fname == ""){
+        document.getElementById('fnameerror').innerHTML = "* Fill this field";
+        return false;
+      }
+      else if(!y){
+        document.getElementById('fnameerror').innerHTML="*characters only";
+        return false;
+      }
+      else if(fname.length<4){
+        document.getElementById('fnameerror').innerHTML = "*Length is too short";
+        return false;
+      }
+      else if(fname.length>4){
+        document.getElementById('fnameerror').innerHTML = "";
+        return true;
+      }
+      
+    }
+
+    function validation1(){
+      
+      var lname = document.getElementById('lname').value;
+      var l=/^[a-zA-Z]+$/;
+      var y=lname.match(l);
+
+      
+
+      if(lname == ""){
+        document.getElementById('lnameerror').innerHTML = "*Fill this field";
+        return false;
+      }
+      else if(!y){
+        document.getElementById('lnameerror').innerHTML="*characters only";
+        return false;
+      }
+      else if(lname.length<4){
+        document.getElementById('lnameerror').innerHTML = "*Length is too short";
+        return false;
+      }
+      else if(lname.length>30){
+        document.getElementById('lnameerror').innerHTML = "Enter less than 30 characters";
+        return false;
+      }
+      else{
+        document.getElementById('lnameerror').innerHTML = "";
+        return true;
+      }
+      
+    }
+
+
+    function validation2(){
+       var mobile=document.getElementById('mbno').value;
+
+      if(mobile==""){
+        document.getElementById('mobileerror').innerHTML = "*Fill the field";
+        return false;
+      }
+      
+      else if(mobile.length<10){
+        document.getElementById('mobileerror').innerHTML = "*Enter a valid mobile number";
+        return false;
+      }
+      else if(mobile.length>10){
+                document.getElementById('mobileerror').innerHTML = "Enter a valid mobile number";
+        return false;
+      }
+      else if(mobile.length==10){
+        document.getElementById('mobileerror').innerHTML = "";
+        return true;
+      }
+      
+    }
+
+
+    function validation3(){
+      
+      var male=document.getElementById('m').checked;
+      var female=document.getElementById('f').checked;
+
+      if(!male && !female){
+        document.getElementById('gendererror').innerHTML = "*Fill this field";
+        return false;
+      }
+      
+      else {
+        document.getElementById('gendererror').innerHTML = "";
+        return true;
+      }
+      
+    }
+
+    function validation4(){
+
+    
+      var city=document.getElementById('city').value;
+      var c=/^[a-zA-Z]+$/;
+      var y=city.match(c);
+     
+      if(city == ""){
+        document.getElementById('cityerror').innerHTML = "*Fill this field";
+        return false;
+      }
+      else if(!y){
+        document.getElementById('cityerror').innerHTML="*characters only";
+        return false;
+      }
+      
+      else if(city.length>1){
+        document.getElementById('cityerror').innerHTML = "";
+        return true;
+      }
+      
+    }
+
+   function validation5(){
+      
+      var pincode=document.getElementById('pincode').value;
+
+      if(pincode==""){
+        document.getElementById('pinerror').innerHTML = "*Fill this field";
+        return false;
+      }
+      else if(pincode.length<6){
+        document.getElementById('pinerror').innerHTML = "*Enter a valid pincode";
+          return false;
+      }
+      else if(pincode.length>7){
+        document.getElementById('pinerror').innerHTML = "*Enter a valid pincode";
+          return false;
+      }
+      else if(pincode.length==6){
+        document.getElementById('pinerror').innerHTML = "";
+          return true;
+      }
+    }
+    
+    function validation6(){
+      
+      var state=document.getElementById('state').value;
+      var s=/^[a-zA-Z]+$/;
+      var y=state.match(s);
+
+     
+      if(state==""){
+        document.getElementById('stateerror').innerHTML = "*Fill this field";
+        return false;
+      }
+
+      else if(!y){
+        document.getElementById('stateerror').innerHTML="*characters only";
+        return false;
+      }
+      else if(state.length>1){
+        document.getElementById('stateerror').innerHTML = "";
+      return true;
+      }
+      
+    }
+   
+      
+     
+    function validation7(){
+      
+      var country=document.getElementById('country').value;
+      var c=/^[a-zA-Z]+$/;
+      var y=country.match(c);
+
+      if(country==""){
+        document.getElementById('countryerror').innerHTML = "*Fill this field";
+        return false;
+      }
+      else if(!y){
+        document.getElementById('countryerror').innerHTML="*characters only";
+        return false;
+      }
+      else if(country.length>1){
+          return true;
+      }
+      
+    }
+    
+    
+    function validation8() {
+            var marksone=document.getElementById('marksone').value;
+            var perone=document.getElementById('perone').value
+            var yearone=document.getElementById('yearone').value
+
+            if(marksone==""){
+                document.getElementById('marksone').focus();
+                document.getElementById('oneerror').innerHTML = "*Fill this field";
+                return false;
+            }
+            else if(perone==""){
+                document.getElementById('perone').focus();
+                document.getElementById('oneerror').innerHTML = "*Fill this field";
+                return false;
+            }
+            else if(yearone==""){
+                document.getElementById('yearone').focus();
+                document.getElementById('oneerror').innerHTML = "*Fill this field";
+                return false;
+            }
+            else{
+                document.getElementById('oneerror').innerHTML = "";
+                return true;
+            }
+        }
+        function validation9() {
+            var markstwo=document.getElementById('markstwo').value;
+            var pertwo=document.getElementById('pertwo').value
+            var yeartwo=document.getElementById('yeartwo').value
+
+            if(markstwo==""){
+                document.getElementById('markstwo').focus();
+                document.getElementById('twoerror').innerHTML = "*Fill this field";
+                return false;
+            }
+            else if(pertwo==""){
+                document.getElementById('pertwo').focus();
+                document.getElementById('twoerror').innerHTML = "*Fill this field";
+                return false;
+            }
+            else if(yeartwo==""){
+                document.getElementById('yeartwo').focus();
+                document.getElementById('twoerror').innerHTML = "*Fill this field";
+                return false;
+            }
+            else{
+                document.getElementById('twoerror').innerHTML = "";
+                return true;
+            }
+        }
+        function validation10() {
+            var marksthree=document.getElementById('marksthree').value;
+            var perthree=document.getElementById('perthree').value
+            var yearthree=document.getElementById('yearthree').value
+
+            if(marksthree==""){
+                document.getElementById('marksthree').focus();
+                document.getElementById('threeerror').innerHTML = "*Fill this field";
+                return false;
+            }
+            else if(perthree==""){
+                document.getElementById('perthree').focus();
+                document.getElementById('threeerror').innerHTML = "*Fill this field";
+                return false;
+            }
+            else if(yearthree==""){
+                document.getElementById('yearthree').focus();
+                document.getElementById('threeerror').innerHTML = "*Fill this field";
+                return false;
+            }
+            else{
+                document.getElementById('threeerror').innerHTML = "";
+                return true;
+            }
+        }
+        function validation11() {
+            var marksfour=document.getElementById('marksfour').value;
+            var perfour=document.getElementById('perfour').value
+            var yearfour=document.getElementById('yearfour').value
+
+            if(marksfour==""){
+                document.getElementById('marksfour').focus();
+                document.getElementById('fourerror').innerHTML = "*Fill this field";
+                return false;
+            }
+            else if(perfour==""){
+                document.getElementById('perfour').focus();
+                document.getElementById('fourerror').innerHTML = "*Fill this field";
+                return false;
+            }
+            else if(yearfour==""){
+                document.getElementById('yearfour').focus();
+                document.getElementById('fourerror').innerHTML = "*Fill this field";
+                return false;
+            }
+            else{
+                document.getElementById('fourerror').innerHTML = "";
+                return true;
+            }
+        }
+
+        function validation12(){
+      var bsc=document.getElementById('bsc').checked;
+      var bcom=document.getElementById('bcom').checked;
+      var bca=document.getElementById('bca').checked;
+      var ba=document.getElementById('ba').checked;
+  
+
+      if(!bca && !ba && !bsc && !bcom){
+        document.getElementById('courseerror').innerHTML = "*Fill this field";
+        return false;
+      }
+      
+      else {
+        document.getElementById('courseerror').innerHTML = "";
+        return true;
+      }
+      
+    }
+
+
+
+    function final() {
+      if(validation() && validation1() && validation2() && validation3() && validation4() && validation5() && validation6() && validation7() && validation8() && validation9() && validation10() && validation11() && validation12()){
+        alert("Your form has been submitted successfully");
+        return true;
+      }
+      if(!validation()){
+        return validation();
+      }
+      if(!validation1()){
+        return validation1();
+      }
+      if(!validation2()){
+        return validation2();
+      }
+      if(!validation3()){
+        return validation3();
+      }
+      if(!validation4()){
+        return validation4();
+      }
+      if(!validation5()){
+        return validation5();
+      }
+      if(!validation6()){
+        return validation6();
+      }
+      if(!validation7()){
+        return validation7();
+      }
+      if(!validation8()){
+        return validation8();
+      }
+      if(!validation9()){
+				return validation9();
+			}
+			if(!validation10()){
+				return validation10();
+			}
+			if(!validation11()){
+				return validation11();
+			}
+			if(!validation12()){
+				return validation12();
+			}
+
+    }
+
+
+
+ function autoDate(){
+      for(var i = 1 ; i <= 31 ; i++){
+        const node=document.createElement("option");
+        const textnode=document.createTextNode(i);
+        node.appendChild(textnode);
+        document.querySelector("#date").appendChild(node);
+      }
+    }
+    autoDate();
+
+    function autoMon(){
+      var arr = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      for (var i = 0 ; i < arr.length ; i++){
+        const node=document.createElement("option");
+        const textnode=document.createTextNode(arr[i]);
+        node.appendChild(textnode);
+        document.querySelector("#month").appendChild(node);
+      }
+    }
+      autoMon();
+
+      function autoYear(){
+        for(var i = 1985 ; i <= 2022 ; i++){
+        const node=document.createElement("option");
+        const textnode=document.createTextNode(i);
+        node.appendChild(textnode);
+        document.querySelector("#year").appendChild(node);
+
+      }
+    }
+    autoYear();
+    const regex=[A-z] ;
+
+	</script>
+</body>
+</html>
